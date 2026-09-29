@@ -183,3 +183,63 @@ The final confusion matrix was:
 ```text
 [[71, 1],
  [ 4,38]]
+
+---
+
+## Error Analysis
+
+The final model made **5 incorrect predictions** out of 114 test samples.
+
+The confusion matrix shows:
+
+- **71** Benign samples were correctly classified as Benign.
+- **38** Malignant samples were correctly classified as Malignant.
+- **1** Benign sample was incorrectly classified as Malignant.
+- **4** Malignant samples were incorrectly classified as Benign.
+
+This shows that the model made more errors by classifying Malignant cases as Benign than the other way around.
+
+---
+
+## ROC-AUC Analysis
+
+The final KNN model achieved a **ROC-AUC score of 98.25%** on the test dataset.
+
+ROC-AUC measures the model's ability to distinguish between the two target classes across different classification thresholds.
+
+The ROC curve is included in the notebook as part of the final model evaluation.
+
+---
+
+## Technologies Used
+
+The project was developed using the following technologies and Python libraries:
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Seaborn
+- Joblib
+- Jupyter Notebook / Kaggle Notebook
+
+---
+
+## Project Structure
+
+```text
+breast-cancer-knn-classification/
+│
+├── data/
+│   └── KNNAlgorithmDataset.csv
+│
+├── models/
+│   └── knn_breast_cancer_model.joblib
+│
+├── notebooks/
+│   └── breast_cancer_knn.ipynb
+│
+├── .gitignore
+├── README.md
+└── requirements.txt
